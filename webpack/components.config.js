@@ -1,4 +1,4 @@
-﻿/* eslint-disable */
+/* eslint-disable */
 const path = require("path");
 const fs = require("fs");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
@@ -18,6 +18,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "../dist/js/components"),
         filename: "[name].js"
+    },
+    resolve: {
+        alias: {
+            vue$: "vue/dist/vue.esm.js"
+        }
     },
     module: {
         rules: [
